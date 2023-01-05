@@ -1,0 +1,12 @@
+<label for="check">Is Active</label>
+<input class="ms-2" type="checkbox" id="check" [(ngModel)]="checkedValue">
+
+<section *ngIf="checkedValue; then card else txt"></section>
+
+<ng-template #card>
+  <app-checkbox-card></app-checkbox-card>
+</ng-template>
+
+<ng-template #txt>
+  <p class="mt-3">Activa el checkbox para mostrar el contenido</p>
+</ng-template>
